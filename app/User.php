@@ -40,4 +40,8 @@ class User extends Authenticatable
     public function school() {
         return $this->hasOne('App\School');
     }
+
+    public function form_results() {
+        return $this->hasOne('App\FormResult');
+    }
 }
