@@ -15,6 +15,17 @@ class CreateFormResultsTable extends Migration
     {
         Schema::create('form_results', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->integer('user_id');
+            $table->integer('creativity');
+            $table->integer('autonomy');
+            $table->integer('rigor');
+            $table->integer('teamwork');
+            $table->integer('evaluation_method');
+            $table->integer('digital');
+            $table->integer('science');
+            $table->integer('literature');
+            $table->integer('foreign_lang');
+            $table->integer('total_score');
             $table->timestamps();
         });
     }
