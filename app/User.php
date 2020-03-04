@@ -41,7 +41,8 @@ class User extends Authenticatable
         return $this->hasOne('App\School');
     }
 
-    public function form_results() {
+    public function formresult() {
         return $this->hasOne('App\FormResult');
     }
+
 }
