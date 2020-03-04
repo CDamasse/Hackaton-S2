@@ -77,7 +77,6 @@
                     <div class="row justify-content-center">
                         <h1>Profils compatibles</h1>
                     </div>
-                    {{ Auth::user()->same_school_users() }}
                 </div>
             </div>
         </div>
