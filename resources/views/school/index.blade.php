@@ -40,7 +40,7 @@
                             </div>
 
                             <div class="form-group row">
-                                <label for="positive" class="col-md-4 col-form-label text-md-right"> + </label>
+                                <label for="positive" class="col-md-4 col-form-label text-md-right"> Points positifs </label>
 
                                 <div class="col-md-6">
                         <textarea type="text" id="positive" class="form-control" name="positive"
@@ -50,7 +50,7 @@
                             </div>
 
                             <div class="form-group row">
-                                <label for="negative" class="col-md-4 col-form-label text-md-right"> - </label>
+                                <label for="negative" class="col-md-4 col-form-label text-md-right"> Points négatifs </label>
 
                                 <div class="col-md-6">
                         <textarea type="text" id="negative" class="form-control" name="negative"
@@ -65,7 +65,7 @@
                                 <div class="col-md-6">
                                     <select type="text" id="note" class="form-control" name="note"
                                             value="{{ old('note') }}">
-                                        <option value="">Combien donneriez-vous à votre école ?</option>
+                                        <option value="">Quelle note donneriez-vous à l'école ?</option>
                                         <option value="1">1</option>
                                         <option value="2">2</option>
                                         <option value="3">3</option>

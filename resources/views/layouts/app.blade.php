@@ -29,7 +29,7 @@
                 </a>
             @endguest
             @auth()
-                <a class="navbar-brand" href="{{ route('home') }}">
+                <a class="navbar-brand" href="{{ route('home', ['id'=> Auth::User()->id]) }}">
                     {{ config('app.name', 'Laravel') }}
                 </a>
             @endauth
@@ -67,7 +67,10 @@
                             </a>
 
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="{{ route('home') }}">Tableau de bord</a>
+                                @auth()
+                                    <a class="dropdown-item" href="{{ route('home', ['id'=> Auth::User()->id]) }}">Tableau
+                                        de bord</a>
+                                @endauth
                                 <a class="dropdown-item" href="{{ route('logout') }}"
                                    onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">

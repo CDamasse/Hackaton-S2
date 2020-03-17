@@ -22,4 +22,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/school', 'SchoolController@index')->name('school.index');
 Route::post('/school/store', 'SchoolController@store')->name('school.store');
 
+Route::post('/form/store', 'FormController@store')->name('form.store');
 Route::get('/form', 'FormController@index')->name('form.index');
