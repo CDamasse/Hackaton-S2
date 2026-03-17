@@ -25,7 +25,7 @@ class FormController extends Controller
         $form->science = $request->q11 + $request->q12;
         $form->literature = $request->q13;
         $form->foreign_lang = $request->q14 + $request->q15;
-        $form->total_score = $form->creativity + $form->autonomy + $form->rigor + $form->teamwork + $form->evaluation_method + $form->digital + $form->science + $form->literature + $form->foreign_language;
+        $form->total_score = $form->creativity + $form->autonomy + $form->rigor + $form->teamwork + $form->evaluation_method + $form->digital + $form->science + $form->literature + $form->foreign_lang;
         $form->save();
 
         return redirect('home');

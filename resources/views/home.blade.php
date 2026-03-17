@@ -20,57 +20,65 @@
                         <div>Créativité</div>
                         <div class="progress mt-3 mb-3">
                             <div class="progress-bar bg-info" role="progressbar"
-                                 style="width: {{(Auth::User()->formresult->creativity*12)}}%"
+                                 style="width: {{ Auth::User()->formresult->creativity / 8 * 100 }}%"
                                  aria-valuenow="{{ Auth::User()->formresult->creativity }}" aria-valuemin="0"
-                                 aria-valuemax="4"></div>
+                                 aria-valuemax="8"></div>
                         </div>
                         <div>Autonomie</div>
                         <div class="progress mt-3 mb-3">
                             <div class="progress-bar bg-info" role="progressbar"
-                                 style="width: {{(Auth::User()->formresult->autonomy*12)}}%" aria-valuenow="50"
-                                 aria-valuemin="0" aria-valuemax="100"></div>
+                                 style="width: {{ Auth::User()->formresult->autonomy / 4 * 100 }}%"
+                                 aria-valuenow="{{ Auth::User()->formresult->autonomy }}"
+                                 aria-valuemin="0" aria-valuemax="4"></div>
                         </div>
                         <div>Rigueur</div>
                         <div class="progress mt-3 mb-3">
                             <div class="progress-bar bg-info" role="progressbar"
-                                 style="width: {{(Auth::User()->formresult->rigor*12)}}%"
-                                 aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                 style="width: {{ Auth::User()->formresult->rigor / 4 * 100 }}%"
+                                 aria-valuenow="{{ Auth::User()->formresult->rigor }}"
+                                 aria-valuemin="0" aria-valuemax="4"></div>
                         </div>
                         <div>Travail de groupe</div>
                         <div class="progress mt-3 mb-3">
                             <div class="progress-bar bg-info" role="progressbar"
-                                 style="width: {{(Auth::User()->formresult->teamwork*12)}}%"
-                                 aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                 style="width: {{ Auth::User()->formresult->teamwork / 8 * 100 }}%"
+                                 aria-valuenow="{{ Auth::User()->formresult->teamwork }}"
+                                 aria-valuemin="0" aria-valuemax="8"></div>
                         </div>
-                        <div>Méthode d'évalutation</div>
+                        <div>Méthode d'évaluation</div>
                         <div class="progress mt-3 mb-3">
                             <div class="progress-bar bg-info" role="progressbar"
-                                 style="width: {{(Auth::User()->formresult->evaluation_method*12)}}%"
-                                 aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                 style="width: {{ Auth::User()->formresult->evaluation_method / 8 * 100 }}%"
+                                 aria-valuenow="{{ Auth::User()->formresult->evaluation_method }}"
+                                 aria-valuemin="0" aria-valuemax="8"></div>
                         </div>
                         <div>Digital</div>
                         <div class="progress mt-3 mb-3">
                             <div class="progress-bar bg-info" role="progressbar"
-                                 style="width: {{(Auth::User()->formresult->digital*12)}}%"
-                                 aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                 style="width: {{ Auth::User()->formresult->digital / 8 * 100 }}%"
+                                 aria-valuenow="{{ Auth::User()->formresult->digital }}"
+                                 aria-valuemin="0" aria-valuemax="8"></div>
                         </div>
                         <div>Science</div>
                         <div class="progress mt-3 mb-3">
                             <div class="progress-bar bg-info" role="progressbar"
-                                 style="width: {{(Auth::User()->formresult->science*12)}}%"
-                                 aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                 style="width: {{ Auth::User()->formresult->science / 8 * 100 }}%"
+                                 aria-valuenow="{{ Auth::User()->formresult->science }}"
+                                 aria-valuemin="0" aria-valuemax="8"></div>
                         </div>
                         <div>Littérature</div>
                         <div class="progress mt-3 mb-3">
                             <div class="progress-bar bg-info" role="progressbar"
-                                 style="width: {{(Auth::User()->formresult->literature*12)}}%"
-                                 aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                 style="width: {{ Auth::User()->formresult->literature / 4 * 100 }}%"
+                                 aria-valuenow="{{ Auth::User()->formresult->literature }}"
+                                 aria-valuemin="0" aria-valuemax="4"></div>
                         </div>
                         <div>Langue étrangère</div>
                         <div class="progress mt-3 mb-3">
                             <div class="progress-bar bg-info" role="progressbar"
-                                 style="width: {{(Auth::User()->formresult->foreign_lang*12)}}%"
-                                 aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                 style="width: {{ Auth::User()->formresult->foreign_lang / 8 * 100 }}%"
+                                 aria-valuenow="{{ Auth::User()->formresult->foreign_lang }}"
+                                 aria-valuemin="0" aria-valuemax="8"></div>
                         </div>
 
                         <div class="row justify-content-center">
@@ -81,8 +89,6 @@
                                 @foreach(Auth::User()->max() as $user)
                                     @if($user->user_id != Auth::User()->id)
                                         <li class="list-group-item">{{ $user->user_name }}</li>
-                                    @else
-
                                     @endif
                                 @endforeach
                             </ul>
